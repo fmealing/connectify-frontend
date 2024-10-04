@@ -1,0 +1,121 @@
+// Imports
+@import "swiper/swiper-bundle.css";
+
+// Variables
+$background: #f7f8fa;
+
+body,
+html {
+  height: 100%;
+  margin: 0;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.flex-grow {
+  flex-grow: 1;
+  overflow-y: auto;
+}
+
+// Global reset
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+// Login styles
+.bg-login {
+  background-image: url("/images/login-bg.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+// Profile styles
+.profile-page {
+  background-color: $background;
+  min-height: 100vh;
+}
+
+.profile-info {
+  background-color: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 1rem;
+  padding: 2rem;
+  margin-bottom: 2.5rem;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.profile-picture {
+  .profile-picture {
+    width: 10rem;
+    height: 10rem;
+    border-radius: 9999px;
+    object-fit: cover;
+  }
+}
+
+.profile-details {
+  flex: 1;
+}
+
+// Password-reset background
+.bg-password-reset {
+  background-image: url("/images/password-reset-bg.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+// Contact-page
+.contact-page {
+  position: relative;
+  min-height: 100vh;
+  background-color: $background;
+
+  // Background image with dark overlay
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url("/public/images/contact-bg.jpg") center center / cover
+      no-repeat;
+    z-index: 0;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); // Dark overlay with 50% opacity
+    z-index: 1;
+  }
+
+  // Ensure the content is above the overlay and background image
+  .contact-content {
+    position: relative;
+    z-index: 2;
+    max-width: 60rem;
+    margin: 0 auto;
+    padding: 2rem;
+    text-align: center;
+
+    h1 {
+      color: #ffffff;
+    }
+
+    p {
+      color: #ffffff;
+    }
+  }
+}
