@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 // Final Call-To-Action component
 const FinalCTA: React.FC = () => {
@@ -15,12 +16,12 @@ const FinalCTA: React.FC = () => {
       </p>
 
       {/* Call-to-Action Button */}
-      <a
-        href="/signup"
+      <Link
+        to="/signup"
         className="px-10 py-4 bg-accent text-white font-semibold rounded-md shadow-lg hover:bg-accent-dark transition-transform transform hover:scale-105 text-base sm:text-lg md:text-xl"
       >
         Get Started
-      </a>
+      </Link>
     </section>
   );
 };

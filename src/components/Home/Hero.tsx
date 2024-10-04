@@ -2,6 +2,7 @@ import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import "../../styles/Hero.scss"; // Importing specific styles for Hero section
+import { Link } from "react-router-dom";
 
 // Hero component
 const Hero: React.FC = () => {
@@ -25,8 +26,8 @@ const Hero: React.FC = () => {
 
         {/* Call-to-Action Button */}
         <div className="h-14 md:h-16 px-6 md:px-8 bg-primary rounded-lg justify-center items-center gap-3 inline-flex">
-          <a
-            href="/signup"
+          <Link
+            to="/signup"
             className="text-center text-white text-lg md:text-xl font-medium font-body leading-tight flex items-center gap-3"
           >
             Start Connecting
@@ -34,7 +35,7 @@ const Hero: React.FC = () => {
               icon={faArrowRight}
               className="text-white text-base md:text-lg"
             />
-          </a>
+          </Link>
         </div>
       </div>
     </section>
