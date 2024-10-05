@@ -20,7 +20,7 @@ const ProfilePostCard: React.FC<PostCardProps> = ({
   onUpdate,
   onDelete,
 }) => {
-  const apiUrl = "https://connectify-xxmq.onrender.com";
+  const apiUrl = "https://connectify-rhc1.onrender.com";
 
   const [isEditing, setIsEditing] = useState(false);
   const [editedContent, setEditedContent] = useState(textContent);

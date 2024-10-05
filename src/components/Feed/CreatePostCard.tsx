@@ -6,7 +6,7 @@ import { ToastContainer, toast } from "react-toastify"; // Import Toastify compo
 import "react-toastify/dist/ReactToastify.css"; // Import Toastify CSS
 
 const CreatePostCard: React.FC = () => {
-  const apiUrl = "https://connectify-xxmq.onrender.com";
+  const apiUrl = "https://connectify-rhc1.onrender.com";
 
   // State hooks to manage the post content, image URL, modal visibility, and loading status
   const [postContent, setPostContent] = useState("");

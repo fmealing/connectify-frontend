@@ -13,7 +13,7 @@ import { GoogleLogin } from "@react-oauth/google"; // Updated OAuth library
 import { jwtDecode } from "jwt-decode"; // For decoding the Google token
 
 const Login: React.FC = () => {
-  const apiUrl = "https://connectify-xxmq.onrender.com";
+  const apiUrl = "https://connectify-rhc1.onrender.com";
   console.log(apiUrl);
 
   const [email, setEmail] = useState("");

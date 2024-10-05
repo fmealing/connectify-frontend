@@ -17,7 +17,7 @@ const ProfileCard: React.FC<ProfileCardProps> = ({
   username,
   followersCount,
 }) => {
-  const apiUrl = "https://connectify-xxmq.onrender.com";
+  const apiUrl = "https://connectify-rhc1.onrender.com";
 
   const [followers, setFollowers] = useState(followersCount);
   const navigate = useNavigate();

@@ -30,7 +30,7 @@ interface DecodedToken {
 }
 
 const Feed = () => {
-  const apiUrl = "https://connectify-xxmq.onrender.com";
+  const apiUrl = "https://connectify-rhc1.onrender.com";
 
   const [posts, setPosts] = useState<Post[]>([]);
   const [userId, setUserId] = useState<string | null>(null); // Store the decoded user ID

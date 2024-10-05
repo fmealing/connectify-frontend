@@ -10,7 +10,7 @@ function useQuery() {
 }
 
 const SearchResultsPage: React.FC = () => {
-  const apiUrl = "https://connectify-xxmq.onrender.com";
+  const apiUrl = "https://connectify-rhc1.onrender.com";
 
   const query = useQuery().get("query") || ""; // Get search query from the URL
   const [filter, setFilter] = useState("All");
