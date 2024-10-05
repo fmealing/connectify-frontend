@@ -6,7 +6,7 @@ import { ToastContainer, toast } from "react-toastify"; // Import Toastify compo
 import "react-toastify/dist/ReactToastify.css"; // Import Toastify CSS
 
 const CreatePostCard: React.FC = () => {
-  const apiUrl = "https://connectify-11mf.onrender.com";
+  const apiUrl = "https://connectify-xxmq.onrender.com";
 
   // State hooks to manage the post content, image URL, modal visibility, and loading status
   const [postContent, setPostContent] = useState("");
@@ -22,6 +22,8 @@ const CreatePostCard: React.FC = () => {
 
       // Step 1: If an image is selected, upload it to the server
       if (imageUrl) {
+        console.log("Image selected for upload:", imageUrl);
+
         const formData = new FormData();
         formData.append("image", imageUrl); // Append image file to FormData object
 
@@ -36,10 +38,19 @@ const CreatePostCard: React.FC = () => {
         );
 
         uploadedImageUrl = imageUploadResponse.data.url; // Capture the URL of the uploaded image
+        console.log("Image uploaded, URL:", uploadedImageUrl);
+      } else {
+        console.log("No image selected.");
       }
 
       // Step 2: Create the post by sending post content and the image URL to the server
       const token = localStorage.getItem("authToken"); // Retrieve the auth token from localStorage
+      console.log("Auth token:", token);
+      if (!token) {
+        throw new Error("No auth token found in localStorage.");
+      }
+
+      console.log("Post content:", postContent);
       await axios.post(
         `${apiUrl}/api/posts/create`, // Replace with your post creation endpoint
         {
@@ -53,6 +64,8 @@ const CreatePostCard: React.FC = () => {
           },
         }
       );
+
+      console.log("Post created successfully");
 
       // Reset form state after successful post creation
       setPostContent("");
@@ -75,12 +88,14 @@ const CreatePostCard: React.FC = () => {
     if (e.target.files && e.target.files[0]) {
       setImageUrl(e.target.files[0]); // Set the selected file as the image URL
       setIsModalOpen(true); // Open modal for image preview
+      console.log("Image selected:", e.target.files[0]);
     }
   };
 
   // Function to close the image preview modal
   const closeModal = () => {
     setIsModalOpen(false);
+    console.log("Image modal closed");
   };
 
   return (

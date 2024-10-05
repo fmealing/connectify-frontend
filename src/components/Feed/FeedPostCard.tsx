@@ -31,7 +31,7 @@ const FeedPostCard: React.FC<FeedPostCardProps> = ({
   initiallyLiked = false,
   initialComments = [],
 }) => {
-  const apiUrl = "https://connectify-11mf.onrender.com";
+  const apiUrl = "https://connectify-xxmq.onrender.com";
 
   // Constants and state hooks for managing likes, comments, and other interactions
   const maxLength = 100;

@@ -26,7 +26,7 @@ interface Message {
 }
 
 const MessagingPage: React.FC = () => {
-  const apiUrl = "https://connectify-11mf.onrender.com";
+  const apiUrl = "https://connectify-xxmq.onrender.com";
 
   const [conversations, setConversations] = useState<Conversation[]>([]);
   const [followers, setFollowers] = useState<User[]>([]);

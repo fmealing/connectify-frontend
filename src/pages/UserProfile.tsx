@@ -24,7 +24,7 @@ interface UserProfileProps {
 }
 
 const UserProfilePage: React.FC = () => {
-  const apiUrl = "https://connectify-11mf.onrender.com";
+  const apiUrl = "https://connectify-xxmq.onrender.com";
 
   const { userId } = useParams<{ userId: string }>();
   const [userData, setUserData] = useState<UserProfileProps | null>(null);

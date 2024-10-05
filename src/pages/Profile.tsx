@@ -25,7 +25,7 @@ interface UserProfile {
 }
 
 const Profile: React.FC = () => {
-  const apiUrl = "https://connectify-11mf.onrender.com";
+  const apiUrl = "https://connectify-xxmq.onrender.com";
 
   const [profile, setProfile] = useState<UserProfile | null>(null); // Store user profile
   const [followers, setFollowers] = useState<Follower[]>([]); // Followers state
